@@ -12,6 +12,8 @@ package listas;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 
 public class conexion {
@@ -52,4 +54,58 @@ public class conexion {
     public Connection getConnetion() {
         return connection;
     }
+    
+     public void Menu(){
+        
+        int a,c,i;
+        String b="";
+        String pa;
+        List<String> p = new java.util.ArrayList();
+        p.add("");
+        
+       do{
+      a = Integer.parseInt(JOptionPane.
+      showInputDialog("¿Que desea hacer?\n\n1.Ingresar nombres\n2.Salir"));
+      switch(a){
+          case 1 :
+           p.add(JOptionPane.showInputDialog("nombre"));
+           break;
+      
+      
+              
+      
+      }
+       
+    }while(a!=2);
+       
+       
+       for(String elementos:p){
+            BaseDatos bit = new  BaseDatos();
+           String descripcion =""+elementos;
+            bit.enviarDatos("nonbres", descripcion);
+           String str = String.valueOf(elementos);
+     
+        
+      
+    }
+       
+     
+        
+      
+        
+       
+      
+        
+
+    
+     
+     
+     
+     
+ 
+
+
+
+
+       }
 }
